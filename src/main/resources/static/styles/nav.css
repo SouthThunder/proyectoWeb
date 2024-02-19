@@ -1,20 +1,21 @@
-nav{
-    background-color: #f0f0f0;
+nav {
+    background-color: var(--secondary-color);
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
     height: 5rem;
-    
+    color: white;
+
 }
 
-nav > .logo{
+nav>.logo {
     border: 1px solid black;
     display: flex;
     padding: 0 1rem;
     align-items: center;
 }
 
-nav > .links{
+nav>.links {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -22,7 +23,7 @@ nav > .links{
     padding: 1rem;
 }
 
-nav > .links > a{
+nav>.links>a {
     text-decoration: none;
-    color: black;
+    color: white;
 }

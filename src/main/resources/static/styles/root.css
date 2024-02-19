@@ -1,4 +1,11 @@
-html{
+* {
+    --primary-color: #6c64bc;
+    --secondary-color: #6c64bc;
+    --tertiary-color: #6c64bc;
+}
+
+
+html {
     font-size: 62.5%;
     margin: 0;
     padding: 0;

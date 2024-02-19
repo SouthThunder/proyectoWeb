@@ -1,6 +1,10 @@
 footer {
+  margin-top: 2rem;
   bottom: 0;
+  background-color: var(--secondary-color);
+  color: white;
 }
+
 .section-padding {
   padding: 4rem 4rem;
 }
