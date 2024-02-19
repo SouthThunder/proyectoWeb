@@ -1,8 +1,10 @@
 package com.example.demo.entity;
 
+import org.antlr.v4.runtime.misc.NotNull;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -11,6 +13,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
 
 @Entity
 @Getter
@@ -24,8 +27,12 @@ public class Application {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column(length = 100)
     private String name;
-    private String url;
-    private String code;
-    private String internalCode;
+    @Column(length = 100)
+    private String lastname;
+    @Column(length = 100)
+    private String email;
+    private String semester;
+    private String description;
 }
