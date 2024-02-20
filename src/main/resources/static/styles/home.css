@@ -1,3 +1,9 @@
+html {
+    scroll-behavior: smooth;
+    transition-duration: 1s; /* Duración de la animación */
+  }
+  
+
 section {
     display: flex;
     flex-wrap: wrap;
