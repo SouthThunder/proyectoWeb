@@ -1,7 +1,8 @@
 * {
     --primary-color: #6c64bc;
-    --secondary-color: #6c64bc;
-    --tertiary-color: #6c64bc;
+    --secondary-color: #6e67a4;
+    --tertiary-color: #bfbbcc;
+    --fourth-color: #a49ebe;
 }
 
 
@@ -10,4 +11,9 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
