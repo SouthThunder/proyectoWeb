@@ -1,4 +1,3 @@
-
 section {
     display: flex;
     flex-wrap: wrap;
@@ -21,7 +20,7 @@ section>.holder {
     height: 100%;
     position: relative;
     overflow: hidden;
-    padding: 2rem 0;
+    padding: 4rem 0;
 }
 
 section>.holder::before {
@@ -53,7 +52,7 @@ section>.holder>.scroller {
     animation: infinite-scroll 15s linear infinite;
     display: flex;
     width: 100%;
-    gap: 2rem;
+    gap: 8rem;
 }
 
 section>.holder>.scroller .container {
@@ -62,8 +61,13 @@ section>.holder>.scroller .container {
     align-items: center;
     height: 100%;
     text-align: center;
-    gap: 2rem;
+    gap: 8rem;
+}
 
+section>.holder>.scroller>.container>.acontainer {
+    width: 100%;
+    display: flex;
+    position: relative;
 }
 
 section>.holder>.scroller>.container>.acontainer>.member {
@@ -76,8 +80,68 @@ section>.holder>.scroller>.container>.acontainer>.member {
     min-width: 400px;
     border-radius: 15px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-
+    background-color: white;
+    transition: all 0.6s ease-in-out;
 }
+
+section>.holder>.scroller>.container>.acontainer>.member:nth-child(2) {
+    position: absolute;
+    z-index: -1;    
+}
+
+section>.holder>.scroller>.container>.acontainer:not(:hover)>.member:nth-child(2) {
+    animation: slideIn2 .6s ease-in-out forwards;
+}
+
+section>.holder>.scroller>.container>.acontainer:not(:hover)>.member:nth-child(1) {
+    animation: slideOut2 .6s ease-in-out forwards;
+}
+
+section>.holder>.scroller>.container>.acontainer:hover>.member:nth-child(2) {
+    animation: slideIn .6s ease-in-out forwards;
+}
+
+section>.holder>.scroller>.container>.acontainer:hover>.member:nth-child(1){
+    animation: slideOut .6s ease-in-out forwards;
+}
+
+
+@keyframes slideIn2 {
+    0% {
+        transform: translateY(-2rem) translateX(4rem) rotate(5deg);
+    }
+    100% {
+        transform: translateY(0) translateX(0) rotate(0);
+    }
+}
+
+@keyframes slideOut2 {
+    0% {
+        transform: translateY(2rem) translateX(-4rem) rotate(-5deg);
+    }
+    100% {
+        transform: translateY(0) translateX(0) rotate(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    100% {
+        transform: translateY(-2rem) translateX(4rem) rotate(5deg);
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    100% {
+        transform: translateY(2rem) translateX(-4rem) rotate(-5deg);
+    }
+}
+
 
 section>.holder>.scroller .container>.acontainer>.member>picture {
     height: 100%;
@@ -113,7 +177,7 @@ section>.holder>.scroller .container>.acontainer:hover {
     }
 
     100% {
-        transform: translateX(calc(-115%));
+        transform: translateX(calc(-140%));
     }
 }
 
@@ -127,19 +191,19 @@ section>.member {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 
-section>.member:nth-child(2){
+section>.member:nth-child(2) {
     background-color: #fce9d1;
 }
 
-section>.member:nth-child(3){
+section>.member:nth-child(3) {
     background-color: #c7daf9;
 }
 
-section>.member:nth-child(4){
+section>.member:nth-child(4) {
     background-color: #ddffd7;
 }
 
-section>.member:nth-child(5){
+section>.member:nth-child(5) {
     background-color: #dccdff;
 }
 
@@ -181,7 +245,7 @@ section>.member>.content>.abilities>ul {
     gap: 1rem;
 }
 
-section > .member > .content > .abilities > h3 {
+section>.member>.content>.abilities>h3 {
     text-align: left;
     display: flex;
     font-size: 1.3rem;
