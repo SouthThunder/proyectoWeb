@@ -110,6 +110,7 @@ section>.holder>.scroller .container >.acontainer {
 }
 section>.holder>.scroller .container > .acontainer:hover {
     color: var(--primary-color);
+    
 }
 
 
