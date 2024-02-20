@@ -1,8 +1,3 @@
-html {
-    scroll-behavior: smooth;
-    transition-duration: 1s; /* Duración de la animación */
-  }
-  
 
 section {
     display: flex;
@@ -14,7 +9,6 @@ section {
     padding: 0;
     width: 100%;
     height: 100%;
-    background-color: #f5f5f5;
     position: relative;
     overflow: hidden;
 }
@@ -26,8 +20,8 @@ section>.holder {
     width: 100%;
     height: 100%;
     position: relative;
-    gap: 6rem;
     overflow: hidden;
+    padding: 2rem 0;
 }
 
 section>.holder::before {
@@ -56,24 +50,23 @@ section>.holder::after {
 }
 
 section>.holder>.scroller {
+    animation: infinite-scroll 15s linear infinite;
     display: flex;
     width: 100%;
-    animation: infinite-scroll 10s linear infinite;
-    gap: 11rem;
+    gap: 2rem;
 }
 
 section>.holder>.scroller .container {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 100%;
     text-align: center;
     gap: 2rem;
+
 }
 
-section>.holder>.scroller >.container > .acontainer >.member {
+section>.holder>.scroller>.container>.acontainer>.member {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,39 +74,38 @@ section>.holder>.scroller >.container > .acontainer >.member {
     width: 100%;
     height: 100%;
     min-width: 400px;
-    background-color: #f5f5f5;
-    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+
 }
 
-section>.holder>.scroller .container>.acontainer> .member>picture {
+section>.holder>.scroller .container>.acontainer>.member>picture {
     height: 100%;
     display: flex;
 }
 
-section>.holder>.scroller .container >.acontainer> .member>picture img {
+section>.holder>.scroller .container>.acontainer>.member>picture img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     max-height: 300px;
 }
-section>.holder>.scroller .container >.acontainer> .member>picture img {
+
+section>.holder>.scroller .container>.acontainer>.member>picture img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     max-height: 300px;
 }
-section>.holder>.scroller .container >.acontainer {
+
+section>.holder>.scroller .container>.acontainer {
     text-decoration: none;
-    color:black;
-    padding: 1rem;
-    
+    color: black;
 }
-section>.holder>.scroller .container > .acontainer:hover {
+
+section>.holder>.scroller .container>.acontainer:hover {
     color: var(--primary-color);
-    
 }
-
-
 
 @keyframes infinite-scroll {
     0% {
@@ -121,28 +113,51 @@ section>.holder>.scroller .container > .acontainer:hover {
     }
 
     100% {
-        transform: translateX(-100%);
+        transform: translateX(calc(-115%));
     }
 }
-
 
 section>.member {
     display: flex;
     margin: 1rem;
+    justify-content: center;
+    align-items: center;
     width: 80%;
-    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+section>.member:nth-child(2){
+    background-color: #fce9d1;
+}
+
+section>.member:nth-child(3){
+    background-color: #c7daf9;
+}
+
+section>.member:nth-child(4){
+    background-color: #ddffd7;
+}
+
+section>.member:nth-child(5){
+    background-color: #dccdff;
 }
 
 section>.member>picture {
     display: flex;
+    height: inherit;
+    margin-left: 1rem;
     padding: 1rem;
-    height: 100%;
 }
 
+
 section>.member>picture>img {
-    max-height: 300px;
+    height: 400px;
     object-fit: cover;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
 }
+
 
 section>.member>.content {
     width: 100%;
@@ -156,18 +171,27 @@ section>.member>.content>h2 {
 section>.member>.content>h3 {
     text-align: left;
     display: flex;
+    font-size: 1.3rem;
 }
 
 section>.member>.content>.abilities>ul {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: 1rem;
+}
+
+section > .member > .content > .abilities > h3 {
+    text-align: left;
+    display: flex;
+    font-size: 1.3rem;
+    margin: 1rem 0;
 }
 
 section>.member>.content>.abilities>ul>li {
     list-style: none;
     padding: 0.5rem;
-    background-color: #f5f5f5;
-    border: 1px solid black;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
 }
