@@ -1,0 +1,173 @@
+html {
+    scroll-behavior: smooth;
+    transition-duration: 1s; /* Duración de la animación */
+  }
+  
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+    position: relative;
+    overflow: hidden;
+}
+
+section>.holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    gap: 6rem;
+    overflow: hidden;
+}
+
+section>.holder::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 7rem;
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+}
+
+section>.holder::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 7rem;
+    background: linear-gradient(to left,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, 0) 100%);
+}
+
+section>.holder>.scroller {
+    display: flex;
+    width: 100%;
+    animation: infinite-scroll 10s linear infinite;
+    gap: 11rem;
+}
+
+section>.holder>.scroller .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    gap: 2rem;
+}
+
+section>.holder>.scroller >.container > .acontainer >.member {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    min-width: 400px;
+    background-color: #f5f5f5;
+    border: 1px solid black;
+}
+
+section>.holder>.scroller .container>.acontainer> .member>picture {
+    height: 100%;
+    display: flex;
+}
+
+section>.holder>.scroller .container >.acontainer> .member>picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 300px;
+}
+section>.holder>.scroller .container >.acontainer> .member>picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 300px;
+}
+section>.holder>.scroller .container >.acontainer {
+    text-decoration: none;
+    color:black;
+    padding: 1rem;
+    
+}
+section>.holder>.scroller .container > .acontainer:hover {
+    color: var(--primary-color);
+    
+}
+
+
+
+@keyframes infinite-scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+section>.member {
+    display: flex;
+    margin: 1rem;
+    width: 80%;
+    border: 1px solid black;
+}
+
+section>.member>picture {
+    display: flex;
+    padding: 1rem;
+    height: 100%;
+}
+
+section>.member>picture>img {
+    max-height: 300px;
+    object-fit: cover;
+}
+
+section>.member>.content {
+    width: 100%;
+    margin: 0 1rem;
+}
+
+section>.member>.content>h2 {
+    text-align: left;
+}
+
+section>.member>.content>h3 {
+    text-align: left;
+    display: flex;
+}
+
+section>.member>.content>.abilities>ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+section>.member>.content>.abilities>ul>li {
+    list-style: none;
+    padding: 0.5rem;
+    background-color: #f5f5f5;
+    border: 1px solid black;
+}
