@@ -7,7 +7,7 @@ import com.example.demo.entity.Application;
 import com.example.demo.repository.Repository;
 
 
-
+@RequestMapping("/group_2_6")
 @Controller
 public class ApplicationController {
 
@@ -17,7 +17,7 @@ public class ApplicationController {
     
     @PostMapping("/create")
     public Application createApplication( @RequestBody Application application) {
-        System.out.println("ENTREE HP");
+        
         return applicationrepository.save(application);
     }
 

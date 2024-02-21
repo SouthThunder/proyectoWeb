@@ -5,7 +5,7 @@ const email = document.getElementById('email').value;
 const semester = document.getElementById('semester').value;
 const description = document.getElementById('description').value;
 const xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "http://localhost:8080/applications/create");
+    xhttp.open("POST", "http://localhost:8080/grupo_2_6/create");
     xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xhttp.send(
       JSON.stringify({
