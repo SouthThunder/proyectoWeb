@@ -7,7 +7,7 @@ import com.example.demo.entity.Application;
 import com.example.demo.repository.Repository;
 
 
-@RequestMapping("/group_2_6")
+@RequestMapping("/group26")
 @Controller
 public class ApplicationController {
 
