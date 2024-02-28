@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping(value = "/grupo26")
 public class Wikiroutes {
-	@GetMapping("/")
+	@GetMapping("")
 	public String Home() {
 		return "index";
 	}

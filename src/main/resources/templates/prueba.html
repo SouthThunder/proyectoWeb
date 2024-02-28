@@ -3,15 +3,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/src/main/resources/static/css/form.css">
-    <link rel="stylesheet" href="../static/styles/nav.css">
-    <link rel="stylesheet" href="../static/styles/footer.css">
-    <link rel="stylesheet" href="../static/styles/root.css">
+    <link rel="stylesheet" href="/css/form.css">
+    <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/root.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <script src="../static/js/form.js"></script>
+    <script src="/js/form.js"></script>
 </head>
 
 <body>
@@ -28,16 +28,16 @@
       </nav>
     <div class="container">
         <h1>This is a form</h1>
-        <form onsubmit="createApplication()">
+        <form onsubmit=createApplication() id="myForm">
             <div class="sub-container">
                 <!--<label for="name">Name:</#label>-->
-                <input type="text" id="name" name="name" required="required">
+                <input type="text" id="nombre" name="name" required="required">
                 <span>Name</span>
             </div>
 
             <div class="sub-container">
                 <!--<label for="lastname">Lastname:</label>-->
-                <input type="text" id="lastname" name="lastname" required="required">
+                <input type="text" id="apellido" name="lastname" required="required">
                 <span>Last name</span>
             </div>
 
