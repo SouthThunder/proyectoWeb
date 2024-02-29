@@ -19,5 +19,10 @@ public class Wikiroutes {
 	public String losPipolSoloTextICO() {
 		return "prueba2";
 	}
+	@GetMapping("/styles/home")
+	public String Csshome() {
+		return "home.css";
+	}
+
 }
 
