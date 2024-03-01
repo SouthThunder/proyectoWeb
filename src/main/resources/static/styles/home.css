@@ -261,3 +261,39 @@ section>.member>.content>.abilities>ul>li {
     background-color: whitesmoke;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
 }
+
+.container-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.container-img > picture{
+    width: 700px;
+}
+
+
+.container-img > picture > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+table {
+    margin-top: 2rem;
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+}
+th {
+    background-color: #f2f2f2;
+}
