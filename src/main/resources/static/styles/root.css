@@ -1,10 +1,9 @@
 * {
-    --primary-color: #6c64bc;
+    --primary-color: #f0c48c;
     --secondary-color: #6e67a4;
     --tertiary-color: #bfbbcc;
     --fourth-color: #a49ebe;
 }
-
 
 html {
     font-size: 100%;
@@ -12,7 +11,7 @@ html {
     padding: 0;
     box-sizing: border-box;
     font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
+    font-optical-sizing: auto;
     font-style: normal;
 }
 
